@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>HelloWorld</groupId>
+  <artifactId>HelloWorld</artifactId>
+  <version>3.56</version>
+  <packaging>war</packaging>
+  <name>HelloWorld</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <sonar.language>java</sonar.language>
+  </properties>
+
+<repositories>
+   <repository>
+      <id>java.net repository</id>
+      <url>http://download.java.net/maven/2</url>
+   </repository>
+</repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+     <groupId>javax.servlet</groupId>
+     <artifactId>servlet-api</artifactId>
+     <version>2.5</version>
+     <scope>provided</scope>
+    </dependency>
+
+
+    <dependency>
+     <groupId>org.codehaus.sonar-plugins</groupId>
+     <artifactId>sonar-build-breaker-plugin</artifactId>
+     <version>1.0</version>
+    </dependency>   
+       
+  </dependencies>
+
+  <distributionManagement>
+    <repository>
+        <id>localhost.localdomain</id>
+        <name>localhost.localdomain-releases</name>
+        <url>http://localhost:8380/artifactory/demo-lib</url>
+    </repository>
+    <snapshotRepository>
+        <id>localhost.localdomain</id>
+        <name>localhost.localdomain-snapshots</name>
+        <url>http://localhost:8380/artifactory/demo-lib</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <build>
+     <plugins>
+       <plugin>
+         <groupId>org.codehaus.mojo</groupId>
+         <artifactId>autoincrement-versions-maven-plugin</artifactId>
+         <version>2.0-SNAPSHOT</version>
+         <executions>
+           <execution>
+             <id>update-pom-versions</id>
+             <goals>
+               <goal>increment</goal>
+               <goal>commit</goal>
+             </goals>
+             <phase>compile</phase>
+             <configuration>
+                <autoIncrementVersion>true</autoIncrementVersion>
+             </configuration>
+           </execution>
+         </executions>
+       </plugin>
+     </plugins>
+   </build>  
+
+   <pluginRepositories>
+     <pluginRepository>
+       <id>autoincrement-versions-maven-plugin</id>
+       <name>autoincrement-versions-maven-plugin</name>
+       <url>http://autoincrement-versions-maven-plugin.googlecode.com/svn/repo</url>
+       <snapshots>
+         <enabled>true</enabled>
+       </snapshots>
+     </pluginRepository>
+   </pluginRepositories>
+
+</project>
+
