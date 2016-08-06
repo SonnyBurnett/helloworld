@@ -4,7 +4,7 @@
 
   <groupId>HelloWorld</groupId>
   <artifactId>HelloWorld</artifactId>
-  <version>3.56</version>
+  <version>3.60</version>
   <packaging>war</packaging>
   <name>HelloWorld</name>
   <url>http://maven.apache.org</url>
@@ -41,56 +41,29 @@
      <groupId>org.codehaus.sonar-plugins</groupId>
      <artifactId>sonar-build-breaker-plugin</artifactId>
      <version>1.0</version>
-    </dependency>   
+    </dependency>
+   
+    <dependency>
+      <groupId>org.powermock</groupId>
+      <artifactId>powermock-module-junit4</artifactId>
+      <version>1.6.4</version>
+      <scope>test</scope>
+    </dependency>
        
   </dependencies>
 
-  <distributionManagement>
+<distributionManagement>
     <repository>
-        <id>localhost.localdomain</id>
-        <name>localhost.localdomain-releases</name>
-        <url>http://localhost:8380/artifactory/demo-lib</url>
+        <id>central</id>
+        <name>artifactory.example.com-releases</name>
+        <url>http://192.168.33.10:8081/artifactory/releases_mvn_trash</url>
     </repository>
     <snapshotRepository>
-        <id>localhost.localdomain</id>
-        <name>localhost.localdomain-snapshots</name>
-        <url>http://localhost:8380/artifactory/demo-lib</url>
+        <id>snapshots</id>
+        <name>artifactory.example.com-snapshots</name>
+        <url>http://192.168.33.10:8081/artifactory/releases_mvn_trash</url>
     </snapshotRepository>
-  </distributionManagement>
-
-  <build>
-     <plugins>
-       <plugin>
-         <groupId>org.codehaus.mojo</groupId>
-         <artifactId>autoincrement-versions-maven-plugin</artifactId>
-         <version>2.0-SNAPSHOT</version>
-         <executions>
-           <execution>
-             <id>update-pom-versions</id>
-             <goals>
-               <goal>increment</goal>
-               <goal>commit</goal>
-             </goals>
-             <phase>compile</phase>
-             <configuration>
-                <autoIncrementVersion>true</autoIncrementVersion>
-             </configuration>
-           </execution>
-         </executions>
-       </plugin>
-     </plugins>
-   </build>  
-
-   <pluginRepositories>
-     <pluginRepository>
-       <id>autoincrement-versions-maven-plugin</id>
-       <name>autoincrement-versions-maven-plugin</name>
-       <url>http://autoincrement-versions-maven-plugin.googlecode.com/svn/repo</url>
-       <snapshots>
-         <enabled>true</enabled>
-       </snapshots>
-     </pluginRepository>
-   </pluginRepositories>
+</distributionManagement>
 
 </project>
 

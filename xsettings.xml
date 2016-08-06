@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
   <servers>
     <server>
       <username>admin</username>
-      <password>password</password>
       <id>central</id>
     </server>
     <server>
       <username>admin</username>
-      <password>password</password>
       <id>snapshots</id>
     </server>
   </servers>
+
   <profiles>
     <profile>
       <repositories>
@@ -21,38 +21,51 @@
             <enabled>false</enabled>
           </snapshots>
           <id>central</id>
-          <name>releases_mvn_trash</name>
-          <url>http://192.168.33.10:8081/artifactory/releases_mvn_trash</url>
+          <name>libs-release</name>
+          <url>http://localhost:8380/artifactory/libs-release</url>
         </repository>
         <repository>
           <snapshots />
           <id>snapshots</id>
           <name>libs-snapshot</name>
-          <url>http://192.168.33.10:8081/artifactory/releases_mvn_all</url>
+          <url>http://localhost:8380/artifactory/libs-snapshot</url>
         </repository>
-
       </repositories>
       <pluginRepositories>
         <pluginRepository>
           <snapshots>
-            <enabled>true</enabled>
+            <enabled>false</enabled>
           </snapshots>
           <id>central</id>
           <name>plugins-release</name>
-          <url>http://192.168.33.10:8081/artifactory/releases_mvn_all</url>
+          <url>http://localhost:8380/artifactory/plugins-release</url>
         </pluginRepository>
         <pluginRepository>
           <snapshots />
           <id>snapshots</id>
           <name>plugins-snapshot</name>
-          <url>http://192.168.33.10:8081/artifactory/releases_mvn_all</url>
+          <url>http://localhost:8380/artifactory/plugins-snapshot</url>
         </pluginRepository>
       </pluginRepositories>
       <id>artifactory</id>
     </profile>
   </profiles>
+
   <activeProfiles>
     <activeProfile>artifactory</activeProfile>
   </activeProfiles>
+
+<build>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>1.0</version>
+      </plugin>
+    <plugins>
+  </pluginManagement>
+</build>
+
 </settings>
 
