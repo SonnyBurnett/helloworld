@@ -54,9 +54,9 @@
 
 <distributionManagement>
     <repository>
-        <id>central</id>
+        <id>releases</id>
         <name>nexus-releases</name>
-        <url>http://192.168.33.60:8081/nexus/releases_mvn_bakker</url>
+        <url>http://192.168.33.60:8081/repository/releases.mvn.bakker/</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
