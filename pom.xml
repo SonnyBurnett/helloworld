@@ -55,13 +55,13 @@
 <distributionManagement>
     <repository>
         <id>central</id>
-        <name>artifactory.example.com-releases</name>
-        <url>http://192.168.33.10:8081/artifactory/releases_mvn_trash</url>
+        <name>nexus-releases</name>
+        <url>http://192.168.33.60:8081/nexus/releases_mvn_bakker</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>artifactory.example.com-snapshots</name>
-        <url>http://192.168.33.10:8081/artifactory/releases_mvn_trash</url>
+        <name>nexus-snapshots</name>
+        <url>http://192.168.33.60:8081/nexus/snapshots_mvn_bakker</url>
     </snapshotRepository>
 </distributionManagement>
 
