@@ -4,12 +4,12 @@
   <servers>
     <server>
       <username>admin</username>
-      <password>password</password>
+      <password>geheim123</password>
       <id>central</id>
     </server>
     <server>
       <username>admin</username>
-      <password>password</password>
+      <password>geheim123</password>
       <id>snapshots</id>
     </server>
   </servers>
@@ -21,38 +21,22 @@
             <enabled>false</enabled>
           </snapshots>
           <id>central</id>
-          <name>releases_mvn_trash</name>
-          <url>http://192.168.33.10:8081/artifactory/releases_mvn_trash</url>
+          <name>releases_mvn_bakker</name>
+          <url>http://192.168.33.60:8081/nexus/releases_mvn_bakker</url>
         </repository>
         <repository>
           <snapshots />
           <id>snapshots</id>
           <name>libs-snapshot</name>
-          <url>http://192.168.33.10:8081/artifactory/releases_mvn_all</url>
+          <url>http://192.168.33.60:8081/nexus/snapshots_mvn_bakker</url>
         </repository>
-
       </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-          <id>central</id>
-          <name>plugins-release</name>
-          <url>http://192.168.33.10:8081/artifactory/releases_mvn_all</url>
-        </pluginRepository>
-        <pluginRepository>
-          <snapshots />
-          <id>snapshots</id>
-          <name>plugins-snapshot</name>
-          <url>http://192.168.33.10:8081/artifactory/releases_mvn_all</url>
-        </pluginRepository>
-      </pluginRepositories>
-      <id>artifactory</id>
+      
+      <id>nexus</id>
     </profile>
   </profiles>
   <activeProfiles>
-    <activeProfile>artifactory</activeProfile>
+    <activeProfile>nexus</activeProfile>
   </activeProfiles>
 </settings>
 
