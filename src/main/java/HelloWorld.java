@@ -37,7 +37,7 @@ public class HelloWorld extends HttpServlet{
 /* Choose a backgroundcolor The 17 standard colors are: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, and yellow.
  * ******/
 
-  pw.println("<body bgcolor='red'>");
+  pw.println("<body bgcolor='fuchsia'>");
 
 /* Display the version of the servlet that has been deployed from a file*/
 
