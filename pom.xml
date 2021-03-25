@@ -56,7 +56,7 @@
     <repository>
         <id>releases</id>
         <name>nexus-releases2</name>
-        <url>http://172.17.0.4:8081/repository/releases.mvn.taco/</url>
+        <url>http://172.17.0.4:8081/nexus/content/repositories/releases2</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
