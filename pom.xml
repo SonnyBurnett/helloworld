@@ -56,12 +56,12 @@
     <repository>
         <id>releases</id>
         <name>nexus-releases2</name>
-        <url>http://172.17.0.4:8081/nexus/content/repositories/releases2</url>
+        <url>http://172.17.0.2:8081/nexus/content/repositories/releases2</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
         <name>nexus-snapshots</name>
-        <url>http://172.17.0.4:8081/nexus/snapshots_mvn_bakker</url>
+        <url>http://172.17.0.2:8081/nexus/snapshots_mvn_bakker</url>
     </snapshotRepository>
 </distributionManagement>
 
