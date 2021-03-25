@@ -22,7 +22,7 @@
           </snapshots>
           <id>releases</id>
           <name>releases_mvn_bakker</name>
-          <url>http://192.168.33.60:8081/repository/releases.mvn.taco/</url>
+          <url>http://172.17.0.4:8081/repository/releases.mvn.taco/</url>
         </repository>
         <repository>
           <snapshots />
