@@ -61,7 +61,7 @@
     <snapshotRepository>
         <id>snapshots</id>
         <name>nexus-snapshots</name>
-        <url>http://171.17.0.4:8081/nexus/snapshots_mvn_bakker</url>
+        <url>http://172.17.0.4:8081/nexus/snapshots_mvn_bakker</url>
     </snapshotRepository>
 </distributionManagement>
 
